@@ -19,19 +19,5 @@ class LoginController extends Controller
     public function create(LoginCreateUserRequest $request)
     {
         $validate = $request->validated();
-
-        return $validate;
-
-        // $validate = Validator::make($request->all(), [
-        //     'name'     => 'required|max:255',
-        //     'email'    => 'required|max:255',
-        //     'password' => 'required|max:255',
-        // ]);
-
-        // if ($validate->fails()) {
-        //     return ResponseHandler::json([
-        //         'message' => $validate->errors()
-        //     ], HttpCodes::$unprocessableContent);
-        // }
     }
 }
