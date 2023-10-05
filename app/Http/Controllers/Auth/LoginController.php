@@ -18,6 +18,5 @@ class LoginController extends Controller
 
     public function create(LoginCreateUserRequest $request)
     {
-        $validate = $request->validated();
     }
 }
