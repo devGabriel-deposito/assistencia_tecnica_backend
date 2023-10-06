@@ -55,14 +55,4 @@ class LoginController extends Controller
 
         return ResponseHandler::json('', 500);
     }
-
-    public function token(LoginCreateUserRequest $request, User $user)
-    {
-        $auth = Auth::attempt([
-            'email'    => $request->email,
-            'password' => $request->password
-        ]);
-
-        \Log::info($request->user());
-    }
 }

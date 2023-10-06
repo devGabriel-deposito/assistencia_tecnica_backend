@@ -9,7 +9,4 @@ Route::post('/register', [LoginController::class, 'register']); # /register
 Route::put('/redefine', [LoginController::class, 'redefine']); # /redefine
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
 });
